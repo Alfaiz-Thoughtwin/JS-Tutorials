@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>JavaScript</h1><hr><br>
+        <div class="row">
+            <!-- <button class="btn btn-primary" onclick="document.getElementById('date_time').innerHTML=Date()">The Time Is ?</button> -->
+            <button class="btn btn-primary" onclick="displayTime()">The Time Is ?</button>
+            <h4 id="date_time" class="ml-4"></h4>
+        </div><hr><br>
+        <h2 id="demo"></h2><br>
+    </div><hr>
+
+
+    <div class="container">
+      <h1>JavaScript | Arrays</h1>
+      <p class="lead">The best way to loop through an array is using a standard for loop:</p>
+      <p class="lead" id="p_array"></p>
+    </div><hr>
+
+    <div class="container">
+      <h1>toString() | Array</h1>
+      <p class="lead">The toString() method returns an array as a comma separated string:</p>
+      <p class="lead" id="to_String_array"></p>
+    </div><hr>
+
+    <div class="container">
+      <h1>join() | Array</h1>
+      <p class="lead">The join() method joins array elements into a string.</p>
+      <p class="lead">It this example we have used " * " as a separator between the elements:</p>
+      <p class="lead" id="join_array"></p>
+    </div><hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>pop() | Array</h1>
+          <p class="lead">The pop() method removes the last element from an array.</p>
+          <p class="lead" id="pop_array"></p>
+        </div>
+        <div class="col-md-6">
+          <h1>join() | Array</h1>
+          <p class="lead">The shift() method removes the first element of an array (and "shifts" all other elements to the left):</p>
+          <p class="lead" id="shift_array"></p>
+        </div>
+      </div>
+    </div><hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>push() | Array</h1>
+          <p class="lead">The push() method returns the new array length.</p>
+          <p class="lead">The push() method adds element in the last.</p>
+          <button class="btn btn-primary btn-sm" onclick="pushFunc()">Try It</button>
+          <p class="lead" id="push_array"></p>
+          <p class="lead" id="push_array2"></p>
+        </div><hr>
+        </div>
+        <div class="col-md-6">
+          <h1>unshift() | Array</h1>
+          <p class="lead">The unshift() method returns the new array length.</p>
+          <p class="lead">The unshift() method adds element in the first.</p>
+          <button class="btn btn-primary btn-sm" onclick="unshiftFunc()">Try It</button>
+          <p class="lead" id="push_array"></p>
+          <p class="lead" id="push_array2"></p>
+        </div>
+      </div>
+    </div><hr>
+
+    <div class="container">
+      <div class="jumbotron-fluid">
+        <h1>HTML Element Selectors In JavaScript</h1>
+      </div>
+    </div>
+
+    <div class="container childParent">
+      <!-- comment -->
+      <div class="child" id="myFirst">Child 1
+        <ul class="this">
+          <li class="childul">this</li>
+          <li class="childul">is</li>
+          <li class="childul">a</li>
+          <li class="childul">list</li>
+          <li class="childul">of my dreams</li>
+        </ul>
+      </div>
+      <div class="child">Child 2</div>
+      <div class="child">Child 3</div>
+      <div class="child">Child 4</div>
+      <div class="child">Child 5</div>
+    </div><hr>
+
+    <div class="no">This is a dummy div 1</div>
+    <div class="no">This is a dummy div 2</div>
+    <div class="no">This is a dummy div 3</div>
+    <div class="no">This is a dummy div 4</div>
+    <div class="no">This is a dummy div 5</div>
+    <hr>
+
+    <div class="container callback_container">
+      <h3>Students List</h3>
+      <ul id="students"></ul>
+    </div><hr>
+
+    <!-- Fetch API: -->
+    <div class="container jumbotron">
+      <h2 class="mb-4">Fetch API in JavaScript :</h2>
+      <button id="myBtn" class="btn btn-primary">Your Button</button>
+      <button class="btn btn-primary">Fetch Data</button>
+      <div id="content"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- <script src="JavaScript.js"></script> -->
+    <!-- <script src="js_tut_13_numbers_and_number_methods.js"></script> -->
+    <!-- <script src="js_tut_14_array.js"></script> -->
+    <!-- <script src="14_html_element_selectors.js"></script> -->
+    <!-- <script src="15_children_parent_traverse.js"></script> -->
+    <!-- <script src="16_local_session.js"></script> -->
+    <!-- <script src="17_oops.js"></script> -->
+    <!-- <script src="18_object_prototype.js"></script> -->
+    <!-- <script src="19_es6_classes_inheritance.js"></script> -->
+    <!-- <script src="20_asynchronous_programming.js"></script> -->
+    <!-- <script src="21_callback_functions.js"></script> -->
+    <!-- <script src="22_promises.js"></script> -->
+    <!-- <script src="23_arrow_func.js"></script> -->
+    <!-- <script src="24_fetch_api.js"></script> -->
+    <!-- <script src="25_async_await.js"></script> -->
+    <!-- <script src="26_error_handling.js"></script> -->
+    <!-- <script src="27_maps.js"></script> -->
+    <script src="28_destructuring.js"></script>
+  </body>
+</html>

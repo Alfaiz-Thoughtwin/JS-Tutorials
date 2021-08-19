@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>JavaScript DOM Events</title>
+</head>
+
+<body onbeforeunload="onbeforeunloadFunc()">
+    <div class="container">
+        <h1 contenteditable="true">JavaScript DOM Events</h1>
+        <hr><br>
+        <h1>onclick event :</h1>
+        <div class="row">
+            <!-- <button class="btn btn-primary" onclick="document.getElementById('date_time').innerHTML=Date()">The Time Is ?</button> -->
+            <button class="btn btn-primary" onclick="displayTime()">What is the Time ?</button>
+            <h4 id="date_time" class="ml-4"></h4>
+        </div>
+        <h2 id="demo"></h2>
+        <p class="lead" id="click_me" onclick="onclickFunc_02()">Click Me !</p>
+        <p class="lead" id="click_me_03" onclick="onclickFunc_03()">Click Me To Change Color !</p>
+
+        <!-- <form class="border p-4"> -->
+        <div class="border p-4">
+            Field 01 : <input type="text" id="field_01" class="form-control">
+            Field 02 : <input type="text" id="field_02" class="form-control">
+            <button class="btn btn-secondary mt-2" onclick="onclickFunc_04()">Copy Text</button>
+        </div>
+        <!-- </form> -->
+    </div>
+    <hr>
+
+    <div class="container">
+        <h1>onblur event :</h1>
+        <input type="text" id="input_01" class="form-control" placeholder="onblur event is active (UpperCase)"
+            onblur="onblurFunc()">
+    </div>
+    <hr>
+
+    <div class="container">
+        <h1>onbeforeunload event :</h1>
+        <p class="lead">Reload this page, or Refresh this page.</p>
+    </div>
+    <hr>
+
+    <div class="container">
+        <h1>onfoucs event :</h1>
+        <input type="text" id="input_02" class="form-control" placeholder="onblur & onfocus event"
+            onblur="onblurFunc_02()" onfocus="onfocusFunc()">
+    </div>
+    <hr>
+
+    <div class="container">
+        <h1>onchange event :</h1>
+        <div class="form-group">
+            <label for="select_car">Select Car :</label>
+            <select class="form-control" id="select_car" onchange="onchangeFunc()">
+                <option>BMW</option>
+                <option>Audi</option>
+                <option>Mercedes</option>
+                <option>Lamborghini</option>
+                <option>Ferrari</option>
+            </select>
+            <p class="lead" id="select_car_01"></p>
+        </div>
+        Enter some text:<input type="text" id="input_03" class="form-control" value="Hey Dare to Change?" onchange="onchangeFunc_03(this.value)">
+    </div>
+    <hr>
+
+    <div class="container">
+        <h1>oncopy event :</h1>
+        <input type="text" id="input_04" class="form-control" value="Try To Copy This Text !" oncopy="oncopyFunc()">
+        <p id="input_oncopy"></p>
+    </div>
+    <hr>
+
+    <div class="container">
+        <h1>oncut event :</h1>
+        <input type="text" id="input_05" class="form-control" value="Try To Cut This Text !" oncut="oncutFunc()">
+        <p id="input_oncut"></p>
+    </div>
+    <hr>
+
+    <div class="container">
+        <h1>ondblclick event :</h1>
+        <p id="input_ondblclick" ondblclick="ondblclickFunc()">Try To Double Click On This Paragraph</p>
+    </div>
+    <hr>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="DOM_Events.js"></script>
+</body>
+
+</html>
